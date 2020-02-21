@@ -18,7 +18,7 @@ Build a simple image classifier to identify a chest x-ray as either frontal or l
 Based on fastai library and Deep Learning for Coders lesson.
 
 ## Lesson 04 - Segmentation
-Adapts Facebook Research's detectron2 library to read native DICOM. We'll feed single-channel full bit-depth Hounsfield unit pixel data into detectron2 - DICOM and segmentations are from the recent [Combined Healthy Abdominal Organ Segmentation (CHAOS) grand challenge](https://chaos.grand-challenge.org/Combined_Healthy_Abdominal_Organ_Segmentation/).
+Adapts Facebook Research's detectron2 library to read native DICOM and segment the liver on CT scans. We'll feed single-channel full bit-depth Hounsfield unit pixel data into detectron2 - DICOM and segmentations are from the recent [Combined Healthy Abdominal Organ Segmentation (CHAOS) grand challenge](https://chaos.grand-challenge.org/Combined_Healthy_Abdominal_Organ_Segmentation/).
  
 Key modifications to detectron2 to enable reading DICOM natively:
 - Custom data mapper to read the dcm file pixel_array and convert to Houndfield units.
