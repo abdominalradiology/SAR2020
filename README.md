@@ -18,7 +18,7 @@ Build a simple image classifier to identify a chest x-ray as either frontal or l
 Based on fastai library and Deep Learning for Coders lesson.
 
 ## Lesson 04 - Segmentation
-Adapts Facebook Research's detectron2 library to read native DICOM. We'll feed single-channel full bit-depth Houndsfield unit pixel data into detectron2 - DICOM and segmentations are from the recent [Combined Healthy Abdominal Organ Segmentation (CHAOS) grand challenge](https://chaos.grand-challenge.org/Combined_Healthy_Abdominal_Organ_Segmentation/).
+Adapts Facebook Research's detectron2 library to read native DICOM. We'll feed single-channel full bit-depth Hounsfield unit pixel data into detectron2 - DICOM and segmentations are from the recent [Combined Healthy Abdominal Organ Segmentation (CHAOS) grand challenge](https://chaos.grand-challenge.org/Combined_Healthy_Abdominal_Organ_Segmentation/).
  
 Key modifications to detectron2 to enable reading DICOM natively:
 - Custom data mapper to read the dcm file pixel_array and convert to Houndfield units.
@@ -28,7 +28,7 @@ Key modifications to detectron2 to enable reading DICOM natively:
 - Custom get_liver_dicts referenced by DatasetCatalog.register function
   - Loads from _train, _val, or _test file lists
   - Saves path to .dcm file as dataset_dict["file_name"]
-    - Default detectron data mapper simply opens the image file from file_name. Our custom data mapper will instead read the dcm pixel array, convert to Houndsfield units, and load the image array from that
+    - Default detectron data mapper simply opens the image file from file_name. Our custom data mapper will instead read the dcm pixel array, convert to Hounsfield units, and load the image array from that
   - Gets image height and width from dcm.pixel_array
   - Creates bounding box automatically from the given mask (via separate bbox function)
   - Converts binary PNG mask to RLE format using pycocotools library
@@ -44,6 +44,4 @@ Key modifications to detectron2 to enable reading DICOM natively:
 
 - Note that windowing is only done when displaying example images or overlaid inference results
   - Pixel data that are loaded into the network are NOT windowed since that would needlessly compress the dynamic range to the (presumed) detriment of the model's learning.
-    - In this way windowing in python/ML applications means something slightly different that windowing at a diagnostic workstation. Radiolgists know but may not fully appreciate (and do not seem to communicate to computer scientists) that windowing at the workstation doesn't change the true pixel values - an ROI will be the same regardless of the window/level setting applied since it is measuring the true HU, not the screen's pixel greyscale values. Windowing in python/ML applications, on the other hand, fundamentally changes the underlying matrix values.
-
-  
+    - In this way windowing in python/ML applications means something slightly different than windowing at a diagnostic workstation. Radiolgists know but may not fully appreciate (and do not seem to communicate to computer scientists) that windowing at the workstation doesn't change the actual pixel values - an ROI will be the same regardless of the window/level setting applied since it is measuring the true HU, not the screen's pixel greyscale values. Windowing in python/ML, on the other hand, fundamentally changes the underlying pixel values.
