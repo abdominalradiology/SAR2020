@@ -1,10 +1,25 @@
 # SAR 2020 - AI Masters Class
 
+
+## Class Schedule
+
+| Date / Time | Location|
+| --- | --- |
+| Sun 3/1 2:00-4:00 pm | Hibiscus Room |
+
+
+## Requirements
+
+All lessons are designed to run in Google Colab, which is a free web-based version of Jupyter hosted by Google. You will need a Google account (eg, gmail) to use Colab. If you don't already have a Google account, please create one in advance at the account sign-up page. You can delete the account when you complete the lessons if you wish.
+
+## Lesson Notebooks
+
+
 Notebooks on Intro to Python, DICOM Basics, Classification, and Segmentation for AI Masters Class
-- [Lesson 01 - Intro to Python](https://github.com/twloehfelm/SAR2020/blob/master/01%20-%20Intro_to_Jupyter.ipynb)
-- [Lesson 02 - DICOM Basics](https://github.com/twloehfelm/SAR2020/blob/master/02%20-%20DICOM_Basics.ipynb)
-- [Lesson 03 - Classification](https://github.com/twloehfelm/SAR2020/blob/master/03%20-%20Image_Classifier.ipynb)
-- [Lesson 04 - Segmentation](https://github.com/twloehfelm/SAR2020/blob/master/04%20-%20Segmentation.ipynb)
+- [Lesson 01 - Intro to Python](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/01%20-%20Intro_to_Jupyter.ipynb)
+- [Lesson 02 - DICOM Basics](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/02%20-%20DICOM_Basics.ipynb)
+- [Lesson 03 - Classification](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/03%20-%20Image_Classifier.ipynb)
+- [Lesson 04 - Segmentation](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/04%20-%20Segmentation.ipynb)
 
 ## Lesson 01 - Intro to Python
 Very basic introduction to Python and the Jupyter/Colab environment. If you've never visited the command line, start here.
@@ -45,3 +60,6 @@ Key modifications to detectron2 to enable reading DICOM natively:
 - Note that windowing is only done when displaying example images or overlaid inference results
   - Pixel data that are loaded into the network are NOT windowed since that would needlessly compress the dynamic range to the (presumed) detriment of the model's learning.
     - In this way windowing in python/ML applications means something slightly different than windowing at a diagnostic workstation. Radiolgists know but may not fully appreciate (and do not seem to communicate to computer scientists) that windowing at the workstation doesn't change the actual pixel values - an ROI will be the same regardless of the window/level setting applied since it is measuring the true HU, not the screen's pixel greyscale values. Windowing in python/ML, on the other hand, fundamentally changes the underlying pixel values.
+
+
+
