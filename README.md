@@ -18,10 +18,10 @@ All lessons are designed to run in Google Colab, which is a free web-based versi
 
 
 Notebooks on Intro to Python, DICOM Basics, Classification, and Segmentation for AI Masters Class
-- [Lesson 01 - Intro to Python](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/01%20-%20Intro_to_Jupyter.ipynb)
-- [Lesson 02 - DICOM Basics](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/02%20-%20DICOM_Basics.ipynb)
-- [Lesson 03 - Classification](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/03%20-%20Image_Classifier.ipynb)
-- [Lesson 04 - Segmentation](https://colab.research.google.com/github/twloehfelm/SAR2020/blob/master/04%20-%20Segmentation.ipynb)
+- [Lesson 01 - Intro to Python](https://colab.research.google.com/github/abdominalradiology/SAR2020/blob/master/01%20-%20Intro_to_Jupyter.ipynb)
+- [Lesson 02 - DICOM Basics](https://colab.research.google.com/github/abdominalradiology/SAR2020/blob/master/02%20-%20DICOM_Basics.ipynb)
+- [Lesson 03 - Classification](https://colab.research.google.com/github/abdominalradiology/SAR2020/blob/master/03%20-%20Image_Classifier.ipynb)
+- [Lesson 04 - Segmentation](https://colab.research.google.com/github/abdominalradiology/SAR2020/blob/master/04%20-%20Segmentation.ipynb)
 
 ## Lesson 01 - Intro to Python
 Very basic introduction to Python and the Jupyter/Colab environment. If you've never visited the command line, start here.
