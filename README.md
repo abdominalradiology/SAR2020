@@ -7,7 +7,7 @@
 | --- | --- |
 | Sun 3/1 2:00-4:00 pm | Hibiscus Room |
 
-[Slides](https://docs.google.com/presentation/d/1rO1IV9C1ODctDSXlQ6qV08uS0hQCAlJf0vpNumpw0gk/edit?usp=sharing)
+[Slides](http://sar2020.aiai.bio)
 
 
 ## Requirements
